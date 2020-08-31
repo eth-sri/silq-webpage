@@ -113,7 +113,7 @@ def uniformSuperposition[n:!ℕ]():𝔹^n{
 
 In general, vector/array elements can be modified according to this pattern:
 
-<img src="./assets/images/inplace.svg" alt="Inplace modification of vector/array"
+<img src="./assets/images/inplace.png" alt="Inplace modification of vector/array"
 width="400px" />
 
 Of course, Silq prevents implicitly overwriting vector entries:

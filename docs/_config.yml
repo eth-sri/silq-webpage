@@ -1,0 +1,24 @@
+---
+exclude: ['README.markdown']
+permalink: ':title'
+pygments: true
+safe: false
+title: 'Silq'
+url: https://silq.ethz.ch
+
+fenced_code_blocks: true
+
+collections:
+  examples:
+    title: "Examples"
+  documentation:
+    title: "Documentation"
+  overview:
+    title: "Overview"
+  advantages:
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"

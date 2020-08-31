@@ -1,0 +1,31 @@
+#sidebar ul {
+	width: 100%;
+}
+
+#sidebar .sidebar-header {
+	padding: 15px 70px 28px 15px;
+	height: 110px;
+	display: flex;
+	align-items: center;
+}
+
+@media (max-width: 768px) {
+	#sidebar {
+		padding: 0 10px;
+		align-items: center;
+		justify-content: center;
+		flex-direction: row !important;
+	}
+
+	#sidebar .sidebar-header {
+		width: 100%;
+		padding: 0;
+		height: auto;
+	}
+
+	#sidebar .btn-nav {
+		position: absolute; 
+		top: 28px;
+		right: 15px;
+	}
+}

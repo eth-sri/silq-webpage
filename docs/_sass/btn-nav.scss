@@ -1,0 +1,18 @@
+.btn-nav { display: none; }
+
+.btn-nav span { position: relative; z-index: 999999; display: block; width: 30px; height: 2px; background: #32b9dc; transition: all .4s; }
+.btn-nav span + span { margin-top: 6px; }
+
+body.show-nav .btn-nav span:first-child,
+body.show-nav .btn-nav span:nth-child(2),
+body.show-nav .btn-nav span:last-child { transform-origin: 50% 50%; }
+
+body.show-nav .btn-nav span:first-child { transform: translateY(8px) rotate(45deg); }
+body.show-nav .btn-nav span:nth-child(2) { opacity: 0; }
+body.show-nav .btn-nav span:last-child { transform: translateY(-8px) rotate(-45deg); }
+
+@media (max-width: 767px) {
+	.btn-nav {
+		display: block;
+	}
+}

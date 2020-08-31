@@ -1,0 +1,35 @@
+---
+layout: basic
+---
+
+<div class="container-fluid wrapper">
+	<div class="row flex-xl xl-nowrap">
+		<div class="col-sm-2 px-1" id="aside">
+			<div class="py-2 sticky-top flex-grow-1">
+				{% include sidebar.html %}
+			</div>
+		</div>
+		<div class="col-12 col-md-9 col-xl-6 py-md-3 pl-md-5 bd-content" id="main">
+			<div class="main__header">
+				{% include topbar.html title_long=page.title_long description=page.description %}
+			</div><!-- /.main__header -->
+
+			<div class="main__content">
+				{{ content }}
+			</div><!-- /.main__content -->
+		</div>
+	</div>
+</div>
+
+<!--
+<div class="d-flex wrapper">
+
+	
+
+	<section id='content'>
+		{% include topbar.html %}
+
+		{{ content }}
+	</section>
+</div>
+-->

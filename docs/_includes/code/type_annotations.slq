@@ -1,0 +1,7 @@
+def zeroes(){
+  a:=0:!𝔹; // classical bit in zero state
+  b:=a:𝔹; // quantum bit in zero state
+  c:=0:uint[3]; // quantum 3-bit unsigned integer
+  d:=vector(4,false):𝔹[]; // quantum 4-bit vector
+  return (a,b,c,d);
+}

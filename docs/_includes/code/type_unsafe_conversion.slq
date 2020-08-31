@@ -1,0 +1,5 @@
+def unsafe_conversions(){
+	// coerce array to vector
+	a:=array(4,true):𝔹[];
+	b:=a coerce 𝔹^4;
+}

@@ -1,0 +1,137 @@
+.list-group-container {
+	height: calc(100vh - 160px);
+	overflow: auto;
+	padding: 0 0 20px 0;
+}
+
+.list-group .list-group-item.active {
+	background-color: #00bffe;
+	border-color: #00bffe;
+}
+
+.list-group .list-group-item { 
+	background: transparent; 
+	border-width: 0; 
+	transition: background .4s, color .4s; 
+	color: #1d2635; 
+	font-weight: 600; 
+	font-size: 16px;
+	padding: 12px 20px 14px 74px;
+}
+
+body.no-touch .list-group > .list-group-item:hover,
+.list-group .list-group-item.active, { 
+	background: #32b9dc;
+	color: #fff;
+}
+
+
+
+.list-group-item.menu-item-with-children { 
+	position: relative; 
+}
+
+.list-group-item.menu-item-with-children:before { 
+	content: '';
+	background: url('../images/ico-plus.png') no-repeat center/cover; 
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	left: 46px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.list-group-item.menu-item-with-children.active:before { 
+	background: url('../images/ico-minus-white.png') no-repeat center/cover;
+}
+
+.list-group > ul { 
+	padding: 8px 0 8px 54px; 
+	margin-bottom: 0 !important;
+}
+
+.list-group > ul > li { 
+	border-left: 1px solid #d2d6db; 
+	padding-left: 18px; 
+	padding-right: 20px;
+	margin: 0;
+}
+
+.list-group > ul .list-group-item { 
+	padding: 10px 20px; 
+	border-radius: 6px;
+	font-size: 14px;
+}
+
+.list-group > ul .list-group-item:before { 
+	display: none; 
+}
+
+.list-group > ul .list-group-item:focus {
+	background: #e7eaee;
+}
+
+body.no-touch .list-group > ul .list-group-item:hover,
+.list-group > ul .list-group-item.current { 
+	background: #d6dae0 !important; 
+	color: #1d2635; 
+}
+
+
+
+@media (max-width: 1024px) {
+	.list-group .list-group-item { 
+		padding-left: 40px; 
+	}
+
+	.list-group > ul .list-group-item:hover {
+		background: transparent;
+	}
+
+	.list-group > ul .list-group-item.current {
+		background: #d6dae0;
+	}
+
+	.list-group-item.menu-item-with-children:before {
+		left: 15px;
+	}
+
+	.list-group > ul { 
+		padding: 8px 0 8px 22px; 
+	}
+
+	.list-group > ul > li { 
+		padding-left: 10px; 
+		padding-right: 15px; 
+	}
+}
+
+@media (max-width: 767px) {
+	.list-group-container {
+		display: flex;
+		flex-direction: column;
+		position: fixed; 
+		top: 0; 
+		left: 0; 
+		right: 0;
+		height: 100vh;
+		overflow: auto;
+		padding: 78px 0 70px; 
+		background: #e7eaee;
+		justify-content: center;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity .4s, visibility .4s;
+	}
+
+	.list-group {
+		max-height: 100%;
+		overflow: auto;
+	}
+
+	body.show-nav .list-group-container {
+		opacity: 1;
+		visibility: visible;	
+	}
+}

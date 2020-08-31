@@ -1,0 +1,32 @@
+#aside {
+	max-width: 312px;
+	width: 312px;
+	min-width: 312px;
+	flex: unset;
+	padding: 0;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	box-shadow: inset -4px 0 5px 0px rgb(226,230,236);
+	background: #e7eaee;
+}
+
+@media (max-width: 1200px) {
+	#aside {
+		max-width: 250px;
+		width: 250px;
+		min-width: 250px;
+	}
+}
+
+@media (max-width: 767px) {
+	#aside {
+		max-width: 100%;
+		width: 100%;
+		min-width: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0; 
+		z-index: 9999;
+	}
+}

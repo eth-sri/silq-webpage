@@ -1,0 +1,21 @@
+def safe_conversions(){
+  // !int[32] to !ℤ
+  a:=0:!int[32];
+  b:=a as !ℤ;
+
+  // !ℤ to !int[32] (wraparound in case of overflow)
+  c:=0:!ℤ;
+  d:=c as !int[32];
+
+  // 𝔹^10 to int[10]
+  e:=vector(10,0:𝔹);
+  f:=e as int[10];
+
+  // int[10] to 𝔹^10
+  g:=0:int[10];
+  h:=g as 𝔹^10;
+
+  // convert element-wise
+  i:=(0,1,2):!ℕ^3;
+  j:=i as !ℕ×!ℤ×!int[3];
+}

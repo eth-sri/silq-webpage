@@ -1,0 +1,6 @@
+{% capture targeturl %}./{{ include.url }}{% endcapture %}
+{% capture currenturl %}.{{page.url}}{% endcapture %}
+
+<a href="{{ targeturl }}" class="list-group-item list-group-item-action {% if targeturl == currenturl %}active{% endif %}">
+	{{ include.title }}
+</a>

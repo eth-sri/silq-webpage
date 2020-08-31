@@ -1,0 +1,53 @@
+def toW[n:!ℕ](qs:𝔹^n)mfree:𝔹^n{
+  // for a single bit, prepare |1⟩
+  if n==1{ qs[0]:=X(qs[0]); }
+  else if n>1{
+    // split qs into head (first element) and tail (rest)
+    (head,)~tail:=qs;
+    // prepare first bit
+    θ:=2·asin(1/sqrt(n)); // sin(θ/2)=1/sqrt(n), cos(θ/2)=sqrt((n-1)/n)
+    head:=rotY(θ,head); // |0⟩ ↦ cos(θ/2)|0⟩ + sin(θ/2)|1⟩ = cos(θ/2) |0⟩ + 1/sqrt(n)|1⟩
+    // prepare remaining bits
+    if !head { tail := toW(tail); }
+    // combine head and tail again
+    qs:=(head,)~tail;
+  }
+  return qs;
+}
+
+def solve(qs:𝔹^3):!ℕ{
+  // transform ψ₀ to W₃
+  if qs[1]{ phase(-2·π/3); } // exp(2*i*π/3)*exp(i*-2*π/3)=1
+  if qs[2]{ phase(-4·π/3); } // exp(4*i*π/3)*exp(i*-4*π/3)=1
+  // map W₃ to |000⟩
+  qs:=reverse(toW[3])(qs);
+  // check if obtained |000⟩
+  return measure(qs as int[3])!=0;
+}
+
+// EXAMPLE CALL
+
+def generate_input_state(state:!𝔹){
+  // prepare ψ_0 (state=false) or ψ_1 (state=true)
+  qs:=vector(3,0:𝔹);
+  qs:=toW[3](qs);
+  if state{
+    if qs[1]{ phase(4·π/3); }
+    else if qs[2]{ phase(2·π/3); }
+  }else{
+    if qs[1]{ phase(2·π/3); }
+    else if qs[2]{ phase(4·π/3); }
+  }
+  return qs;
+}
+
+def main(){
+  // expected outcome: (0,1)
+
+  // prepare both states
+  ψ_0:=generate_input_state(false);
+  ψ_1:=generate_input_state(true);
+  check0:=solve(ψ_0);
+  check1:=solve(ψ_1);
+  return (check0,check1);
+}

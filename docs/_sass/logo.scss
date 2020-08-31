@@ -1,0 +1,8 @@
+.logo { position: relative; z-index: 9999; display: block; width: 100%; max-width: 130px; margin: 0 auto; }
+.logo img {  }
+
+@media(max-width: 767px) {
+	.logo { margin: 0 auto 0 0; transition: max-width .4s; }
+
+	.aside--fixed .logo {  }
+}

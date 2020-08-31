@@ -1,0 +1,6 @@
+
+{% capture filelocation %}code/{{ include.filename }}{% endcapture %}
+
+{% highlight javascript %}
+{% include {{ filelocation }} %}
+{% endhighlight %}

@@ -1,0 +1,28 @@
+<div id="sidebar" class="nav flex-sm-column">
+	<div class="sidebar-header">
+		<a href="#" class="logo">
+			<img src="./assets/images/logo.svg" alt="" />
+		</a>
+	</div>
+	<div class="list-group-container">
+	<ul class="list-group">
+		{% include sidebar-entry.html url='' title='What is Silq?' %}
+		{% include sidebar-collection.html label='overview' %}
+		{% include sidebar-entry.html url='comparison' title='Comparison to Q#' %}
+		{% include sidebar-collection.html label='examples' %}
+		{% include sidebar-collection.html label='documentation' %}
+		{% include sidebar-entry.html url='install' title='Installing Silq' %}
+		{% include sidebar-entry.html url='contact' title='Contact' %}
+		{% include sidebar-entry.html url='news' title='News' %}
+		{% include sidebar-entry.html url='about' title='About' %}
+	</ul>
+	</div>
+
+	<a href="#" class="btn-nav">
+		<span></span>
+		
+		<span></span>
+		
+		<span></span>
+	</a>
+</div>

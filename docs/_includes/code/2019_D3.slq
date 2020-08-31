@@ -1,0 +1,34 @@
+def solve[n:!ℕ](qs:𝔹^n){
+  x:=0:𝔹;
+  // swap x with LSB of qs
+  // necessary because Silq would block `qs` in the body of `if qs[0] {...}`
+  (x,qs[0]):=(qs[0],x);
+  if x{ // flip all other bits if LSB=1
+    for i in [1..n){
+      qs[i]:=X(qs[i]);
+    }
+  }
+  x:=H(x); // map LSB to 1/√̅2 (|0⟩±|1⟩)
+  if x{
+    // flip all other bits if LSB=1
+    // - if LSB was originally 0, this flips the bits iff H flipped the LSB
+    // - if LSB was originally 1, this leaves the other bits flipped
+    //   if H flipped the LSB and restores the other bits otherwise
+    for i in [1..n){
+      qs[i]:=X(qs[i]);
+    }
+  }
+  // swap x back
+  (qs[0],x):=(x,qs[0]);
+  forget(x=0);
+  return qs;
+}
+
+// EXAMPLE CALL
+
+def main(){
+  // example usage for N=3
+  x := 0:!int[3];
+  y := x as 𝔹^3;
+  return solve(y);
+}

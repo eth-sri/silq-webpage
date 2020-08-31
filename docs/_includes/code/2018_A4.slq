@@ -1,0 +1,27 @@
+def solve(k:!ℕ){
+  // produce uniform superposition over k-bit uints
+  i:=0:uint[k];
+  for j in [0..k){ i[j]:=H(i[j]); }
+  // invert i-th qubits (results in correct state, but entangled with i)
+  qs:=vector(2^k,0:𝔹);
+  qs[i]=X(qs[i]);
+  // uncompute i
+  forget(i=λ(qs:𝔹^(2^k))lifted{ // function to reconstruct i from qs
+    i:=0:uint[k];
+    for j in [0..2^k){
+      if qs[j]{ // in the superposition's summand where qs[j]==1, i==j
+        i=j as uint[k];
+      }
+    }
+    return i;
+  }(qs));
+  // return result
+  return qs;
+}
+
+// EXAMPLE CALL
+
+def main(){
+  // example usage for k=2
+  return solve(2);
+}

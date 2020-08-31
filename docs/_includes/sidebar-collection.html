@@ -1,0 +1,25 @@
+{% for collection in site.collections %}
+{% if collection.label == include.label %}
+
+{% capture targeturl %}./{{collection.label}}{% endcapture %}
+{% capture currenturl %}.{{page.url}}{% endcapture %}
+
+<a href="{{ targeturl }}" class="list-group-item list-group-item-action
+menu-item-with-children {% if targeturl == currenturl %}active{% endif %}">
+	{{ collection.title }}
+</a>
+{% if targeturl == currenturl %}
+<ul class="list-unstyled" id="{{collection.title}}-submenu">
+	{% for doc in collection.docs %}
+	<li>
+		<a href="{{ targeturl }}#{{ doc.url }}" class="list-group-item
+		list-group-item-action">
+			{{ doc.title }}
+		</a>
+	</li>
+	{% endfor %}
+</ul>
+{% endif %}
+
+{% endif %}
+{% endfor %}

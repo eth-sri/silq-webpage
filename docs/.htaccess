@@ -1,0 +1,7 @@
+# turn off directory browsing
+IndexIgnore *
+
+# implicitly add .html extension
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]

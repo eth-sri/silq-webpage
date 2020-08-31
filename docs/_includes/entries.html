@@ -1,0 +1,14 @@
+{% for collection in site.collections %}
+{% if collection.label == include.label %}
+{% for doc in collection.docs %}
+<article>
+		<h2 id='{{ doc.url }}'>
+			{{ doc.title }}
+		</h2>
+	<section class='body'>
+		{{ doc.output }}
+	</section>
+</article>
+{% endfor %}
+{% endif %}
+{% endfor %}

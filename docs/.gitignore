@@ -1,0 +1,8 @@
+!.gitignore
+!.gitmodules
+*~
+/.jekyll-cache
+
+components/
+
+_site/

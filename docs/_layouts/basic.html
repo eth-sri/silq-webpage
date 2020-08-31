@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<head>
+	<title>{{ site.title }} - {{ page.title_long }}</title>
+	<meta charset='utf-8' />
+	<meta name='description' content='{{site.title}} - High-Level Quantum Programming' />
+	<meta name='viewport' content='width=device-width, initial-scale=1,
+	maximum-scale=1' />
+
+	<!-- favicon -->
+	<link rel="shortcut icon" href="{{ site.url }}/assets/images/favicon.png" />
+
+	<!-- open graph information (parsed by facebook, slack, etc.) -->
+	<meta property="og:title" content="{{ page.title_long }}" />
+	<meta property="og:description" content="{{ site.title}} - High-level Quantum Programming" />
+	<meta property="og:image" content="{{site.url}}/assets/images/logo_og.png" />
+	{% if page.url %}
+		<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+	{% endif %}
+
+	<!--MATHJAX-->
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		tex2jax: {
+			inlineMath: [ ['$','$'], ["$","$"], ["\\(","\\)"] ],
+			processEscapes: true
+		},
+		TeX: {
+			Macros: {
+				ket: ['| #1 \\rangle', 1],
+				norm: ['\\left|\\left|#1\\right|\\right|', 1],
+				facs: ['\\frac{1}{\\sqrt{2^n}}', 0],
+				add: ['\\mathcal{A}', 0]
+			}
+		},
+	});
+	</script>
+	<script type="text/javascript" async
+		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+	<!--styles-->
+	<link href="./assets/css/styles.css" rel="stylesheet" type='text/css'>
+
+	<!-- Bootstrap CSS CDN -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+
+	
+</head>
+
+<body>
+	{{ content }}
+
+
+	<!-- jQuery CDN - Slim version (=without AJAX) -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<!-- jQuery CDN - Full version -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- Popper.JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+	<!-- Bootstrap JS -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	<!-- jQuery Custom Scroller CDN -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+	<script src="./assets/js/assets.js"></script>
+</body>
+
+</html>

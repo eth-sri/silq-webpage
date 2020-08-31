@@ -1,0 +1,24 @@
+---
+title: What is Silq?
+title_long: What is Silq?
+description: Silq is a new high-level programming language for quantum computing with a strong static type system, developed at ETH Zürich.
+layout: default
+---
+
+<div class="container text-center">
+	<div class="row">
+		{{ site.advantages | where:"key", "semantics" }}
+		{{ site.advantages | where:"key", "reduce" }}
+		{{ site.advantages | where:"key", "bug" }}
+	</div>
+	<div class="row top-buffer">
+		{{ site.advantages | where:"key", "uncompute" }}
+		{{ site.advantages | where:"key", "physicality" }}
+		{{ site.advantages | where:"key", "download" }}
+	</div>
+</div>
+
+<div class="videocontainer text-center">
+	<iframe src="https://www.youtube.com/embed/EvWL9rNJ9m0" 
+	frameborder="0" allowfullscreen class="video"></iframe>
+</div>

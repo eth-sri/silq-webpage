@@ -1,0 +1,23 @@
+def solve[n:!ℕ](x:𝔹^n)lifted{
+  y:=0:𝔹;
+  // Check all possible periods.
+  // Periods with P<(n+1)/2 are implicitly detected by period 2P because P<=(n+1)/2-1 implies 2P<=n-1.
+  for p in [(n+1) div 2..n){
+    // check period p
+    z := 1:𝔹;
+    for i in [0..n-p){
+      z&=x[i]==x[i+p];
+    }
+    y|=z;
+  }
+  return y;
+}
+
+// EXAMPLE CALL
+
+def main(){
+  // expected outcome: (0,1)
+  ap:=solve((true,true,false));
+  p:=solve((false,false,false));
+  return (ap,p);
+}

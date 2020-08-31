@@ -1,0 +1,15 @@
+def grover[n:!ℕ](f:const int[n]!→qfree 𝔹){
+	nIterations:=ceil(π/4*sqrt(2^n));
+	cand:=0:int[n];
+	for k in [0..n) { cand[k] := H(cand[k]); }
+
+	for k in [0..nIterations){
+		if f(cand) { phase(π); }
+		cand:=groverDiff[n](cand);
+	}
+	return measure(cand);
+}
+
+def groverDiff[n:!ℕ](cand:int[n]){
+	return cand;
+}

@@ -21,6 +21,12 @@ In order to get started learning Silq, we recommend:
 For bug reports, please add an issue to our [GitHub
 repository](https://github.com/eth-sri/silq/issues).
 
+#### Improvements to this Website
+
+To suggest improvements to this website, you can open a [pull
+request](https://github.com/eth-sri/silq-webpage/pulls) to the webpage source on
+[GitHub](https://github.com/eth-sri/silq-webpage).
+
 #### Contact
 
 To contact us, write to [silq@inf.ethz.ch](mailto:silq@inf.ethz.ch).

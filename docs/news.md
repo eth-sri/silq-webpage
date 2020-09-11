@@ -22,6 +22,13 @@ layout: default
 - Silq is a High-level Programming Language for Quantum Computers, [ACM
   News](https://cacm.acm.org/news/245606-silq-is-a-high-level-programming-language-for-quantum-computers/fulltext),
   June 15, 2020
+- Silq: Eine neue Sprache für einen neuartigen Computer, [SRF
+  Wissenschaftsmagazin](https://www.srf.ch/news/panorama/quantencomputer-silq-eine-neue-sprache-fuer-einen-neuartigen-computer),
+  August 29, 2020 (German)
+- Silq: Eine Programmiersprache für Quantencomputer aus der Schweiz, [SRF Radio,
+  Digital
+  Podcast](https://www.srf.ch/play/radio/popupaudioplayer?id=5693835a-2e2a-4715-a647-633fd5344cbf),
+  August 28, 2020 (Swiss German, starting at 08:20)
 - Meet Silq: The first intuitive programming language for quantum computers,
   [Digital
   Trends](https://www.digitaltrends.com/computing/silq-programming-language-quantum-computing/),

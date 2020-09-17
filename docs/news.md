@@ -25,6 +25,9 @@ layout: default
 - Silq: Eine neue Sprache für einen neuartigen Computer, [SRF
   Wissenschaftsmagazin](https://www.srf.ch/news/panorama/quantencomputer-silq-eine-neue-sprache-fuer-einen-neuartigen-computer),
   August 29, 2020 (German)
+- Qubits in Seide, [c't
+  20/2020](https://www.heise.de/select/ct/2020/20/2017810451305479639),
+ September 12, 2020 (German)
 - Silq: Eine Programmiersprache für Quantencomputer aus der Schweiz, [SRF Radio,
   Digital
   Podcast](https://www.srf.ch/play/radio/popupaudioplayer?id=5693835a-2e2a-4715-a647-633fd5344cbf),

@@ -64,4 +64,4 @@ layout: default
 
 ### Press Release
 
-The original press release of Silq can be found [here](./downloads/Silq-Press_Release.pdf).
+The original press release of Silq can be found <a href="./downloads/Silq-Press_Release.pdf">here</a>.

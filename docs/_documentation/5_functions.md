@@ -51,8 +51,8 @@ The following table lists other functions supported by Silq.
 | `Y:𝔹→mfree 𝔹`                | `Y(b)` returns `b` after applying `Y`-gate: $\ket{b} \mapsto i (-1)^b \ket{1-b}$                                                               |
 | `Z:𝔹→mfree 𝔹`                | `Z(b)` returns `b` after applying `Z`-gate: $\ket{b} \mapsto (-1)^b \ket{b}$                                                                   |
 | `dup:const τ→qfree τ`          | `dup(v)` returns a duplicate of `v`: $\ket{v} \mapsto \ket{v}\ket{v}$. Note that `dup` does not violate the no cloning theorem.                 |
-| `array:!ℕ×const τ×→qfree τ[]`  | `array(v,m)` returns an array filled with `m` duplicates of `v` (analogous to `dup`)                                                       |
-| `vector:!ℕ×const τ×→qfree τ^n` | `vector(v,m)` returns a vector filled with `m` duplicates of `v` (analogous to `dup`)                                                      |
+| `array:!ℕ×const τ×→qfree τ[]`  | `array(m,v)` returns an array filled with `m` duplicates of `v` (analogous to `dup`)                                                       |
+| `vector:!ℕ×const τ×→qfree τ^n` | `vector(m,v)` returns a vector filled with `m` duplicates of `v` (analogous to `dup`)                                                      |
 | `forget(⋅=⋅):τ×const τ !qfree` | `forget(x,y)` forgets `x` if it equals `y` (and is undefined otherwise). This allows for (unsafe) uncomputation according to a specific function.                                                                        |
 | `⋅[⋅]:const τ×!uint !→qfree τ` | `e1[e2]` returns the `e2`-th element of `e1`                                                                                                   |
 

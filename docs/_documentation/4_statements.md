@@ -65,7 +65,7 @@ Overall, Silq enforces the following properties for quantum control flow:
 - `while e {...}`: While loops; `e` must be classical.
 - `for i in [e1..e2) {...}`: For-loop from `e1` (inclusive) to `e2` (exclusive).
   Both `e1` and `e2` must be classical.
-- `for i in [e1..e2] {...}`: For-loop from `e1` (inclusive) to `e2` (inclusive).
+- `for i in (e1..e2] {...}`: For-loop from `e1` (exclusive) to `e2` (inclusive).
   Both `e1` and `e2` must be classical.
 
 For example, `geometric` samples from the `geometric(0.5)` distribution by

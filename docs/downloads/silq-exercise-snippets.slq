@@ -1,0 +1,165 @@
+////////////
+// TASK 1 //
+////////////
+
+def groverDiffusion[n:!ℕ](cand:uint[n]) mfree: uint[n] {
+	for k in [0..n) { cand[k] := H(cand[k]); }
+	if cand!=0 { phase(π); }
+	for k in [0..n) { cand[k] := H(cand[k]); }
+	return cand;
+}
+ 
+def grover[n:!ℕ](f:uint[n] !→ lifted 𝔹){
+	nIterations:=floor(π/(4·asin(2^(-n/2))));
+	cand:=0:uint[n];
+	for k in [0..n) { cand[k] := H(cand[k]); }
+ 
+	for k in [0..nIterations){
+		b := f(cand);
+		if b { phase(π); }
+		forget(b = f(cand));
+		cand:=groverDiffusion(cand);
+	}
+	return measure(cand);
+}
+ 
+def dummy_oracle(x:uint[5]) lifted{
+	// TODO: complete the oracle
+	return x == 2; // a simple oracle that checks if the input equals 2
+}
+ 
+def main() { // run grover on dummy oracle
+	return grover(dummy_oracle);
+}
+
+
+
+////////////
+// TASK 2 //
+////////////
+
+// generate state |Φ⁺⟩
+def preparation(){
+	// TODO: COMPLETE
+}
+
+def alice(ψ:𝔹,a:𝔹){
+	// TODO: COMPLETE
+}
+
+def bob(measured_a:!𝔹,measured_ψ:!𝔹,b:𝔹){
+	// TODO: COMPLETE
+}
+
+def teleportation(ψ:𝔹){
+	(a,b) := preparation();
+	(measured_a, measured_ψ) := alice(ψ,a);
+	ψ := bob(measured_a, measured_ψ, b);
+	return ψ;
+}
+
+def main(){ // tests checking teleportation works correctly
+	assert(measure(teleportation(0:𝔹))==0); // teleport 0
+	assert(measure(H(teleportation(H(0:𝔹))))==0); // teleport |+⟩
+	assert(measure(teleportation(1:𝔹))==1); // teleport 1
+	assert(measure(H(teleportation(H(1:𝔹))))==1); // teleport |-⟩
+}
+
+
+////////////////
+// SOLUTION 1 //
+////////////////
+
+def dummy_oracle(x:uint[5]) lifted{
+	return
+		 x % 2 == 1 &&
+		 10 <= x &&
+		 x <= 20 &&
+		 x % 5 == 4;
+}
+
+def dummy_oracle_explicit(x:uint[5]) lifted{
+	x_mod_2 := x % 2;
+	x_mod_2_eq_1 := x_mod_2 == 1;
+ 
+	ten_leq_x := 10 <= x;
+ 
+	x_leq_20 := x <= 20;
+ 
+	x_mod_5 := x % 5;
+	x_mod_5_eq_4 := x_mod_5 == 4;
+ 
+	two := x_mod_2_eq_1 && ten_leq_x;
+	three := two && x_leq_20;
+	four := three && x_mod_5_eq_4;
+ 
+	// uncomputation
+ 
+	forget(three = two && x_leq_20);
+	forget(two = x_mod_2_eq_1 && ten_leq_x);
+ 
+	forget(x_mod_5_eq_4 = x_mod_5 == 4);
+	forget(x_mod_5 = x % 5);
+ 
+	forget(x_leq_20 = x <= 20);
+	forget(ten_leq_x = 10 <= x);
+ 
+	forget(x_mod_2_eq_1 = x_mod_2 == 1);
+	forget(x_mod_2 = x % 2);
+ 
+	return four;
+}
+
+////////////////
+// SOLUTION 2 //
+////////////////
+
+// generate state |Φ⁺⟩
+def preparation(){
+	// prepare a in state |+⟩
+	a := H(0:𝔹);
+  
+	// prepare b to obtain state |00⟩ + |11⟩ (ignoring normalization)
+	b := 0:𝔹;
+	if a {
+		 b := X(b);
+	}
+ 
+	return (a,b);
+}
+ 
+def alice(ψ:𝔹,a:𝔹){
+	if ψ {
+		a := X(a);
+	}
+ 
+	ψ := H(ψ);
+ 
+	return (measure(a), measure(ψ));
+}
+ 
+def bob(measured_a:!𝔹,measured_ψ:!𝔹,b:𝔹){
+	if measured_a {
+		b := X(b);
+	}
+ 
+	if measured_ψ {
+		b := Z(b);
+	}
+ 
+	return b;
+}
+ 
+def teleportation(ψ:𝔹){
+	(a,b) := preparation();
+	(measured_a, measured_ψ) := alice(ψ,a);
+	ψ := bob(measured_a, measured_ψ, b);
+	return ψ;
+}
+ 
+def main(){ // tests checking teleportation works correctly
+	assert(measure(teleportation(0:𝔹))==0); // teleport |0⟩
+	assert(measure(H(teleportation(H(0:𝔹))))==0); // teleport |+⟩
+	assert(measure(teleportation(1:𝔹))==1); // teleport |1⟩
+	assert(measure(H(teleportation(H(1:𝔹))))==1); // teleport |-⟩
+}

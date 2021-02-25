@@ -5,32 +5,45 @@ description: In the following, we explain how to install Silq.
 layout: default
 ---
 
-## Recommended: Visual Studio Code Plugin
+## Recommended: VS Codium Plugin
 
 The recommended way to install Silq is by using its
-[vscode](https://code.visualstudio.com/) plugin. This approach works for Linux,
-Mac, and Windows.
+[VSCodium](https://vscodium.com) plugin. (VSCodium is a libre version of VSCode).
+This approach works for Linux, Mac, and Windows.
 
-### Install Visual Studio Code
+### Install VSCodium
 
-First, install the general-purpose editor `vscode`, e.g., by following these
-instructions:
-- [Linux instructions](https://code.visualstudio.com/docs/setup/linux#_installation)
-- [Mac instructions](https://code.visualstudio.com/docs/setup/mac)
-- [Windows instructions](https://code.visualstudio.com/docs/setup/windows)
+First, install the general-purpose editor `VSCodium` by following [these 
+instructions](https://vscodium.com/#install). Scroll down to find the instructions 
+for your Operating System and/or Linux Distro.
 
 ### Install Plugin
 
-Follow these instructions to install Silq's vscode plugin (more details on
+Follow these instructions to install Silq's VSCodium plugin (more details on
 installing plugins can be found
 [here](https://code.visualstudio.com/docs/editor/extension-gallery)):
 
-- Open `vscode`
-- Open tab extensions (`Ctrl+Shift+X`)
+- Open `codium`
+- Open the extensions tab (`Ctrl+Shift+X`)
 - Install `vscode-silq`
 
 For more details on this plugin, see the extension's [GitHub
-repository](https://github.com/eth-sri/vscode-silq).
+repository](https://github.com/eth-sri/vscode-silq)
+
+If there is an issue finding the extension from within VSCodium, try these steps:
+
+- Look at the `vscode-silq` [extension page](https://marketplace.visualstudio.com/items?itemName=eth-sri.vscode-silq) and click on `Install`
+- Follow the on-screen instructions to open VSCodium and install the extension
+
+If that also fails, install the extension manually with these steps:
+
+- Download the extension as a .vsix file by clicking on`Download Extension` under "Resources"
+on the `vscode-silq` [extension page](https://marketplace.visualstudio.com/items?itemName=eth-sri.vscode-silq)
+- Open the extensions tab in VSCodium with `Ctrl+Shift+X`
+- Click on the three dots in the top right corner (...)
+- Select `Install from VSIX`
+- Navigate to the `.vsix` file you downloaded and select it
+
 
 ### Unicode Input
 

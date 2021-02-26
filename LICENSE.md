@@ -3,7 +3,7 @@
 ## Font Awesome
 
 Directories [docs/assets/fonts](docs/assets/fonts) and
-[docs/assets/images](docs/assets/images) contains icons from [Font
+[docs/assets/images](docs/assets/images) contain icons from [Font
 Awesome](https://fontawesome.com/) licensed under [CC BY 4.0
 License](https://creativecommons.org/licenses/by/4.0/).
 

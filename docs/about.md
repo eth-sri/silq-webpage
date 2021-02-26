@@ -19,5 +19,5 @@ To contract us, see [here](./contact).
 
 #### License Information
 
-The license information for this webpage can be found at
-[https://github.com/eth-sri/silq-webpage/LICENSE.md](https://github.com/eth-sri/silq-webpage).
+The license information for this webpage can be found
+[here](https://github.com/eth-sri/silq-webpage/blob/master/LICENSE.md).

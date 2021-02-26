@@ -17,9 +17,7 @@ Zurich](https://ethz.ch/en.html):
 
 To contract us, see [here](./contact).
 
-#### Licenses
+#### License Information
 
-This page relies on icons from [Font Awesome](https://fontawesome.com/) licensed
-under [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/) and was
-built using [Jekyll](https://jekyllrb.com/) licensed under the [MIT
-license](https://github.com/jekyll/jekyll/blob/master/LICENSE).
+The license information for this webpage can be found at
+[https://github.com/eth-sri/silq-webpage/LICENSE.md](https://github.com/eth-sri/silq-webpage).

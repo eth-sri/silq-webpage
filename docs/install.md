@@ -11,6 +11,10 @@ The recommended way to install Silq is by using its
 [VSCodium](https://vscodium.com) plugin. (VSCodium is a libre version of VSCode).
 This approach works for Linux, Mac, and Windows.
 
+Please note that [VSCode](https://code.visualstudio.com/) also works if you choose to 
+use it, or already have it installed and don't want to install VSCodium. The steps for
+either IDE are identical.
+
 ### Install VSCodium
 
 First, install the general-purpose editor `VSCodium` by following [these 

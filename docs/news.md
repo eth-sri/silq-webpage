@@ -14,10 +14,10 @@ layout: default
   Japan](https://jp.techcrunch.com/2020/06/16/2020-06-15-silq-is-a-new-high-level-programming-language-for-quantum-computers/),
   June 16, 2020 (Japanese)
 - The first intuitive programming language for quantum computers
-  [ETH News](https://ethz.ch/en/news-and-events/eth-news/news/2020/06/the-first-intuitive-programming-language-for-quantum-computers.html)
+  [ETH News](https://ethz.ch/en/news-and-events/eth-news/news/2020/06/the-first-intuitive-programming-language-for-quantum-computers.html),
   June 15, 2020
 - Silq: ETH Zürich stellt höhere Programmiersprache für Quantencomputer vor
-  [Heise](https://www.heise.de/news/Silq-ETH-Zuerich-stellt-hoehere-Programmiersprache-fuer-Quantencomputer-vor-4784683.html)
+  [Heise](https://www.heise.de/news/Silq-ETH-Zuerich-stellt-hoehere-Programmiersprache-fuer-Quantencomputer-vor-4784683.html),
   June 16, 2020 (German)
 - How to get started in quantum computing,
   [Nature](https://www.nature.com/articles/d41586-021-00533-x), March 1, 2021

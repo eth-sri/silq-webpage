@@ -70,3 +70,13 @@ layout: default
 ### Press Release
 
 The original press release of Silq can be found <a href="./downloads/Silq-Press_Release.pdf">here</a>.
+
+### Works with Silq
+
+- Roman Wixinger (TU Munich), Uncomputation and Entanglement in High-level
+  Quantum Programming
+  Languages, [Semester project](./downloads/Uncomputation_and_Entanglement_in_High_level_Quantum_Programming_Languages_Roman_Wixinger.pdf)
+- Marco Lewis (Newcastle University), Silq implementation of Quantum Walk on a Binary Welded
+  Tree, [GitHub repository](https://github.com/marco-lewis/silq-binary-welded-trees)
+- Srinjoy Ganguly and Thomas Cambier, Quantum Computing with Silq Programming,
+  [Book](https://www.amazon.com/Quantum-Computing-Silq-Programming-programming/dp/1800569661)

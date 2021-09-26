@@ -16,6 +16,9 @@ layout: default
 - The first intuitive programming language for quantum computers
   [ETH News](https://ethz.ch/en/news-and-events/eth-news/news/2020/06/the-first-intuitive-programming-language-for-quantum-computers.html),
   June 15, 2020
+- Computer scientists take on the quantum challenge, [ETH Globe
+  magazine](https://ethz.ch/en/news-and-events/eth-news/news/2021/09/computer-scientists-take-on-the-quantum-challenge.html),
+  September 22, 2021
 - Silq: ETH Zürich stellt höhere Programmiersprache für Quantencomputer vor
   [Heise](https://www.heise.de/news/Silq-ETH-Zuerich-stellt-hoehere-Programmiersprache-fuer-Quantencomputer-vor-4784683.html),
   June 16, 2020 (German)

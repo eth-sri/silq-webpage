@@ -15,12 +15,19 @@ a {
 	color: #32b9dc;
 }
 
+.card-box {
+	margin: -20px 0px;
+	padding-top: 20px;
+}
+
+.card-box>* {
+	margin-bottom: 20px;
+}
+
 .card-img-top {
     width: 20%;
     object-fit: cover;
 }
-
-.top-buffer { margin-top:20px; }
 
 svg {
 	fill: red !important;

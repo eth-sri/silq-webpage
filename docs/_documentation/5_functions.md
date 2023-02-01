@@ -53,7 +53,8 @@ The following table lists other functions supported by Silq.
 | `dup:const τ→qfree τ`          | `dup(v)` returns a duplicate of `v`: $\ket{v} \mapsto \ket{v}\ket{v}$. Note that `dup` does not violate the no cloning theorem.                 |
 | `array:!ℕ×const τ×→qfree τ[]`  | `array(m,v)` returns an array filled with `m` duplicates of `v` (analogous to `dup`)                                                       |
 | `vector:!ℕ×const τ×→qfree τ^n` | `vector(m,v)` returns a vector filled with `m` duplicates of `v` (analogous to `dup`)                                                      |
-| `forget(⋅=⋅):τ×const τ !qfree` | `forget(x,y)` forgets `x` if it equals `y` (and is undefined otherwise). This allows for (unsafe) uncomputation according to a specific function.                                                                        |
+| `forget(⋅=⋅):τ×const τ→qfree 𝟙` | `forget(x,y)` forgets `x` if it equals `y` (and is undefined otherwise). This allows for (unsafe) uncomputation according to a specific function.                                                                        |
+| `forget(⋅):τ→qfree 𝟙` | `forget(x)` forgets `x`, assuming Silq can figure out how to uncompute it.                                                                        |
 | `⋅[⋅]:const τ×!uint !→qfree τ` | `e1[e2]` returns the `e2`-th element of `e1`                                                                                                   |
 
 </div>

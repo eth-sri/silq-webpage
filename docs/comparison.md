@@ -5,7 +5,7 @@ description: Compared to Q#, Silq requires significantly less code and uses less
 layout: default
 ---
 
-![Comparison to Q#](./assets/images/comparison.svg)
+<img src="./assets/images/comparison.svg" alt="Comparison to Q#" />
 
 To compare Silq to Q#, we solved all 28 tasks of Microsoft's Q# [Summer
 2018](https://codeforces.com/contest/1002/) and [Winter

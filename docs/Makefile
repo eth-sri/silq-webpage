@@ -2,6 +2,15 @@
 run:
 	jekyll serve --watch --trace
 
+docker-run:
+	docker run \
+		--rm \
+		-it \
+		-v "$$(pwd)":/srv/jekyll \
+		-p 4000:4000 \
+		jekyll/jekyll:latest \
+		/bin/bash -c "gem install webrick && jekyll serve --watch --trace"
+
 # build webpage (store in _site)
 build:
 	jekyll build
